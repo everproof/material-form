@@ -1,9 +1,6 @@
 // @flow
-const lengthValidator = (
-  type: 'less' | 'more',
-  limit: number,
-  value: string,
-) => type === 'less' ? value.length > limit : value.length < limit
+const lengthValidator = (type: 'less' | 'more', limit: number, value: string) =>
+  type === 'less' ? value.length > limit : value.length < limit
 
 const lengthValidate = (type: 'less' | 'more') => (limit: ?number) => (
   value: string,
