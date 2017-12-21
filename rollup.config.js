@@ -34,6 +34,7 @@ export default {
     'react-redux',
     'redux',
     'redux-form',
+    'redux-form-material-ui',
   ],
   globals: {
     'material-ui/Checkbox': 'Checkbox',
@@ -44,5 +45,6 @@ export default {
     'react-redux': 'ReactRedux',
     redux: 'Redux',
     'redux-form': 'ReduxForm',
+    'redux-form-material-ui': 'ReduxFormMaterialUi',
   },
 }

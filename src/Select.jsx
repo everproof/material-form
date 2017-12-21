@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import { Field } from 'redux-form'
-import Select from 'redux-form-material-ui/lib/Select'
+import { Select } from 'redux-form-material-ui'
 
 import { requiredValidate } from './validation'
 
