@@ -17,7 +17,7 @@ function Checkboxes({
     value: string,
   },
   meta: Object,
-  options: Array<{ label: string, value: string | Object }>,
+  options: Array<{ label: string, value: number | string | Object }>,
 }) {
   return (
     <div>
@@ -56,5 +56,5 @@ function Checkboxes({
 }
 
 export default function CheckboxGroup(props: Object) {
-  return <Field {...props} type="checkbox" component={Checkboxes} />
+  return <Field component={Checkboxes} type="checkbox" {...props} />
 }
