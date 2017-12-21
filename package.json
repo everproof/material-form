@@ -1,13 +1,11 @@
 {
   "name": "material-form",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A set of components that allow you to use Material UI with Redux Form while still using Material UI's API.",
   "main": "lib/index.js",
   "module": "es/index.js",
   "scripts": {
-    "build": "rimraf es lib && rollup -c --environment BUILD:production --debug",
-    "build:env": "rimraf lib && rollup -c --environment BUILD:production -o lib/index.js -f umd",
-    "build:es": "rimraf es && rollup -c --environment BUILD:production -o es/index.js -f es",
+    "build": "rimraf es lib && rollup -c --environment BUILD:production",
     "format": "prettier-eslint --write \"src/**/*.{js,jsx}\"",
     "flow:coverage": "flow-coverage-report -i 'src/**/*.js' -i 'src/**/*.jsx' -t html -t json -t text --threshold 95",
     "lint": "eslint src --ext .js,.jsx",
@@ -91,6 +89,7 @@
     "react": ">=15.0.0",
     "react-redux": ">=5.0.0",
     "redux": ">=3.0.0",
-    "redux-form": ">=7.0.0"
+    "redux-form": ">=7.0.0",
+    "redux-form-material-ui": ">=5.0.0-beta.2"
   }
 }

@@ -1,7 +1,7 @@
 // @flow
 import React from 'react'
 import { Field } from 'redux-form'
-import TextField from 'redux-form-material-ui/lib/TextField'
+import { TextField } from 'redux-form-material-ui'
 
 import {
   maxLengthValidate,
