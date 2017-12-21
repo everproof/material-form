@@ -9,7 +9,7 @@
     "build:env": "rimraf lib && rollup -c --environment BUILD:production -o lib/index.js -f umd",
     "build:es": "rimraf es && rollup -c --environment BUILD:production -o es/index.js -f es",
     "format": "prettier-eslint --write \"src/**/*.{js,jsx}\"",
-    "flow:coverage": "flow-coverage-report -i 'src/**/*.js' -i 'src/**/*.jsx' -t html -t json -t text --threshold 96",
+    "flow:coverage": "flow-coverage-report -i 'src/**/*.js' -i 'src/**/*.jsx' -t html -t json -t text --threshold 95",
     "lint": "eslint src --ext .js,.jsx",
     "test": "npm run format && npm run lint && flow && npm run flow:coverage && jest --coverage",
     "test:watch": "jest --watch",
@@ -47,6 +47,7 @@
   "dependencies": {
     "material-ui": "1.0.0-beta.24",
     "react": "15.6.2",
+    "react-redux": "5.0.6",
     "redux": "3.7.2",
     "redux-form": "7.2.0",
     "redux-form-material-ui": "5.0.0-beta.2"
@@ -75,6 +76,7 @@
     "flow-typed": "2.2.3",
     "husky": "0.14.3",
     "jest": "22.0.3",
+    "lodash": "^4.17.4",
     "prettier-eslint-cli": "4.6.1",
     "react-dom": "15.6.2",
     "react-test-renderer": "15.6.2",
@@ -87,6 +89,7 @@
   "peerDependencies": {
     "material-ui": ">=1.0.0-beta.24",
     "react": ">=15.0.0",
+    "react-redux": ">=5.0.0",
     "redux": ">=3.0.0",
     "redux-form": ">=7.0.0"
   }

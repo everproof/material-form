@@ -6,11 +6,9 @@ import RFMUCheckbox from 'redux-form-material-ui/lib/Checkbox'
 import MaterialControl from '../MaterialControl'
 import type { Props } from '../MaterialControl'
 
-export default function MaterialCheckbox({
+export default ({
   isInGroup = false,
   ...props
-}: Props & { isInGroup?: boolean }) {
-  return (
-    <MaterialControl control={isInGroup ? Checkbox : RFMUCheckbox} {...props} />
-  )
-}
+}: Props & { isInGroup?: boolean }) => (
+  <MaterialControl control={isInGroup ? Checkbox : RFMUCheckbox} {...props} />
+)
