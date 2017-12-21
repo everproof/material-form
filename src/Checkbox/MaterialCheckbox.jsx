@@ -10,5 +10,5 @@ export default ({
   isInGroup = false,
   ...props
 }: Props & { isInGroup?: boolean }) => (
-    <MaterialControl control={isInGroup ? Checkbox : RFMUCheckbox} {...props} />
-  )
+  <MaterialControl control={isInGroup ? Checkbox : RFMUCheckbox} {...props} />
+)
