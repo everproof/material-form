@@ -18,7 +18,7 @@ export function Controls({
     value: string,
   },
   meta: Object,
-  options: Array<{ label: string, value: number | string | Object }>,
+  options: Array<{ label: string, value: string }>,
 }) {
   return (
     <div>
@@ -36,13 +36,13 @@ export function Controls({
           return onChange(arr)
         }
 
-        const checked = inputValue.includes(value.toString())
+        const checked = inputValue.includes(value)
 
         return (
           <Control
             checked={checked}
             isInGroup
-            key={`${label}-${name}-${value.toString()}`}
+            key={`${label}-${name}-${value}`}
             label={label}
             meta={meta}
             name={`${name}[${index}]`}

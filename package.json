@@ -5,14 +5,18 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "scripts": {
-    "build": "rimraf es lib && rollup -c --environment BUILD:production",
+    "build": "npm run build:clean && npm run build:lib && npm run build:flow",
+    "build:clean": "rimraf lib",
+    "build:lib": "babel -d lib src",
+    "build:flow": "flow-copy-source src lib",
     "format": "prettier-eslint --write \"src/**/*.{js,jsx}\"",
     "flow:coverage": "flow-coverage-report -i 'src/**/*.js' -i 'src/**/*.jsx' -t html -t json -t text --threshold 95",
     "lint": "eslint src --ext .js,.jsx",
     "test": "npm run format && npm run lint && flow && npm run flow:coverage && jest --coverage",
     "test:watch": "jest --watch",
     "precommit": "npm test",
-    "prepush": "npm run precommit && npm run build"
+    "prepush": "npm run precommit && npm run build",
+    "prepublish": "npm run prepush"
   },
   "author": {
     "name": "Rhys Gevaux",
@@ -24,6 +28,14 @@
     "type": "git",
     "url": "https://github.com/everproof/material-form.git"
   },
+  "bugs": {
+    "url": "https://github.com/everproof/material-form/issues"
+  },
+  "homepage": "https://github.com/everproof/material-form#readme",
+  "files": [
+    "lib",
+    "src"
+  ],
   "jest": {
     "collectCoverageFrom": [
       "**/src/**/*.{js,jsx}",
@@ -70,6 +82,7 @@
     "eslint-plugin-jsx-a11y": "6.0.3",
     "eslint-plugin-react": "7.5.1",
     "flow-bin": "0.61.0",
+    "flow-copy-source": "^1.2.1",
     "flow-coverage-report": "0.4.0",
     "flow-typed": "2.2.3",
     "husky": "0.14.3",
