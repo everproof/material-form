@@ -1,6 +1,6 @@
 {
   "name": "material-form",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A set of components that allow you to use Material UI with Redux Form while still using Material UI's API.",
   "main": "lib/index.js",
   "scripts": {
